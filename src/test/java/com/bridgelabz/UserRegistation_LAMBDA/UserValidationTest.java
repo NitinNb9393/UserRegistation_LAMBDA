@@ -9,51 +9,51 @@ public class UserValidationTest {
 		UserValidation validation = new UserValidation();
 		boolean actualResult = true;
 		try {
-			actualResult = validation.firstName("Manish");
+			actualResult = validation.firstNameValidation("Ashish");
 		} catch (UserValidationException exception) {
 			Assert.assertEquals(actualResult, exception.message);
 		}
 	}
 
 	@Test
-	public void lastName_Validation() {
+	public void giveLastName_Validation() {
 		UserValidation validation = new UserValidation();
 		boolean actualResult = true;
 		try {
-			actualResult = validation.lastName("Kumar");
+			actualResult = validation.lastNameValidation("Kumar");
 		} catch (UserValidationException exception) {
 			Assert.assertEquals(actualResult, exception.message);
 		}
 	}
 
 	@Test
-	public void email_Validation() {
+	public void givenEmail_Validation() {
 		UserValidation validation = new UserValidation();
 		boolean actualResult = true;
 		try {
-			actualResult = validation.email("mkaubr007@gmail.com");
+			actualResult = validation.emailValidation("abc007@gmail.com");
 		} catch (UserValidationException exception) {
 			Assert.assertEquals(actualResult, exception);
 		}
 	}
 
 	@Test
-	public void phoneNumber_Validation() {
+	public void givenPhoneNumber_Validation() {
 		UserValidation validation = new UserValidation();
 		boolean actualResult = true;
 		try {
-			actualResult = validation.phoneNumber("+918002695700");
+			actualResult = validation.phoneNumberValidation("+919004876134");
 		} catch (UserValidationException exception) {
 			Assert.assertEquals(actualResult, exception.message);
 		}
 	}
 
 	@Test
-	public void password_Validation() {
+	public void givenPassword_Validation() {
 		UserValidation validation = new UserValidation();
 		boolean actualResult = true;
 		try {
-			actualResult = validation.password("qw1rt@Ms");
+			actualResult = validation.passwordValidation("qw1rt@Ms");
 		} catch (UserValidationException exception) {
 			Assert.assertEquals(actualResult, exception.message);
 		}
